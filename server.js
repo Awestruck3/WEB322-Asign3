@@ -21,6 +21,8 @@ projectData.initialize();
 
 app.use(express.static('public'));
 
+app.set('views', __dirname + '/views');
+
 app.get('/', (req, res) =>{
     res.sendFile(path.join(__dirname, './public/views/index.html'));
 });
